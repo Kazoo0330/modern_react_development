@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { var1 } from './module';
+import { var1, function1, ReactComponent } from './module';
 
 const HelloWorld = () => {
   return (
@@ -13,8 +13,9 @@ const HelloWorld = () => {
 
 
 console.log(var1);
+function1();
 
 ReactDOM.render(
-  <HelloWorld />,
+  <ReactComponent />,
   document.getElementById('root')
 )
