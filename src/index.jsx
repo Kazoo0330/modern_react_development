@@ -1,7 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { var1, function1, ReactComponent } from './module';
+// export default pattern
+import ClassComponent1 from "./ClassComponent1";
+import ClassComponent2 from "./ClassComponent2";
+// ______________________
+
+// not export default pattern
+import { ClassComponent3 } from "./ClassComponent3";
+// __________________________
 
 const HelloWorld = () => {
   return (
@@ -11,11 +18,11 @@ const HelloWorld = () => {
   );
 }
 
-
-console.log(var1);
-function1();
-
 ReactDOM.render(
-  <ReactComponent />,
+  <div>
+    <ClassComponent1 />
+    <ClassComponent2 />
+    <ClassComponent3 />
+  </div>,
   document.getElementById('root')
 )
