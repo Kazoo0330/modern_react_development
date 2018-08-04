@@ -1,15 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// export default pattern
-import ClassComponent1 from "./ClassComponent1";
-import ClassComponent2 from "./ClassComponent2";
-// ______________________
-
-// not export default pattern
-import { ClassComponent3 } from "./ClassComponent3";
-// __________________________
-
+import ReactComponent from './ReactComponent';
 const HelloWorld = () => {
   return (
     <div>
@@ -19,10 +11,6 @@ const HelloWorld = () => {
 }
 
 ReactDOM.render(
-  <div>
-    <ClassComponent1 />
-    <ClassComponent2 />
-    <ClassComponent3 />
-  </div>,
+  <ReactComponent name='kazoo' music='SheenaRingo' />,
   document.getElementById('root')
 )
