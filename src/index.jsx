@@ -1,24 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-class Human {
-  constructor(name, age) {
-  this.name = name;
-  this.age = age;
+class Human extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = { name: "Kazoo" };
   }
 
-  callMyProfile() {
-    console.log(this.name, this.age);
+  render() {
+    return (
+      <h2 onClick={this.onButtonClick}>
+        {this.state.name} {this.props.age}
+      </h2>
+    );
   }
+
+  onButtonClick = () => {
+    this.setState({ name: this.state.name + "san" });
+  };
 }
-
-const Kazoo = new Human("Kazoo", 25);
-// console.log(Kazoo);
-Kazoo.callMyProfile();
-
-const Sheena = new Human("Sheena Ringo", 40);
-// console.log(Sheena);
-Sheena.callMyProfile();
 
 import ReactComponent from './ReactComponent';
 const HelloWorld = () => {
@@ -30,6 +30,6 @@ const HelloWorld = () => {
 }
 
 ReactDOM.render(
-  <ReactComponent name='kazoo' music='SheenaRingo' />,
+  <Human age="25" />,
   document.getElementById('root')
 )
