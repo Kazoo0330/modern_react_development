@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ReactComponent from './ReactComponent';
 
 class Human extends React.Component {
   constructor(props){
     super(props)
     this.state = { name: "Kazoo" };
   }
-
+  onButtonClick = () => {
+    this.setState({ name: this.state.name + "san" });
+  };
   render() {
     return (
       <h2 onClick={this.onButtonClick}>
@@ -14,13 +17,9 @@ class Human extends React.Component {
       </h2>
     );
   }
-
-  onButtonClick = () => {
-    this.setState({ name: this.state.name + "san" });
-  };
 }
 
-import ReactComponent from './ReactComponent';
+
 const HelloWorld = () => {
   return (
     <div>
